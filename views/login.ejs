@@ -1,9 +1,13 @@
 <div class="row mt-5">
   <div class="col-md-6 m-auto">
     <div class="card card-body">
-      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Login</h1>
       <%- include('partials/messages') %>
-      <form action="/users/login" method="POST">
+      <form
+        action="/users/login"
+        method="POST"
+        onsubmit="return submitUserForm();"
+      >
         <div class="form-group">
           <label for="email">Email</label>
           <input
@@ -24,8 +28,15 @@
             placeholder="Enter Password"
           />
         </div>
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LdO9cUZAAAAAG30R3lH1q9me13Syew1QLUMJ5IF"
+          data-callback="verifyCaptcha"
+        ></div>
+        <div id="g-recaptcha-error"></div>
         <button type="submit" class="btn btn-primary btn-block">Login</button>
       </form>
+
       <p class="lead mt-4">
         No Account? <a href="/users/register">Register</a>
       </p>
