@@ -6,7 +6,7 @@ This is a user login and registration app using Node.js, Express, Passport, Mong
 ### Usage
 
 ```sh
-$ clone repository from:- https://github.com/hemant-soni-vst-au4/Authentication/tree/master
+$ clone repository from:- https://github.com/hemant-soni-vst-au4/Authentication
 ```
 
 ```sh
